@@ -1,0 +1,14 @@
+<div class="listHeader">
+  <h3>Things To Do</h3>
+  <input
+    [(ngModel)]="listItemValue"
+    (keydown.enter)="saveListItem()"
+    placeholder="Remember..."
+    class="listInput"
+    type="boolean"
+  /><button (click)="saveListItem()">Save</button>
+  <li *ngFor="let item of newListItem; let i = index">
+    {{ item }}
+    <button (click)="deleteListItem(i)">Delete</button>
+  </li>
+</div>
